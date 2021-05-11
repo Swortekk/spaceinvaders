@@ -7,18 +7,18 @@ package fr.unilim.iut.spaceinvaders;
 
 import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 
-    public class SpaceInvadersTest {
+public class SpaceInvadersTest {
 	
-       private SpaceInvaders spaceinvaders;
+    private SpaceInvaders spaceinvaders;
 
-	   @Before
-	   public void initialisation() {
-		  
-	   }
+    @Before
+    public void initialisation() {
+	    spaceinvaders = new SpaceInvaders(15, 10);
+    }
 	    
 	   @Test
 	   public void test_AuDebut_JeuSpaceInvaderEstVide() {
-		    SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+		  
 		    assertEquals("" + 
 		    "...............\n" + 
 		    "...............\n" +
@@ -33,8 +33,48 @@ import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 	   }
 	   
 	   @Test
+		public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
+
+			spaceinvaders.deplacerVaisseauVersLaDroite();
+			
+			assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"........V......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
+	   
+	   @Test
+		public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(14,9);
+
+			spaceinvaders.deplacerVaisseauVersLaDroite();
+			
+			assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"..............V\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
+	   
+	   @Test
 		public void test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu() {
-			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+			
 			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
 			assertEquals("" + 
 			"...............\n" + 
@@ -49,9 +89,12 @@ import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 			".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		}
 	   
+
+		
+	   
 	   @Test
 		public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
-			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+			
 			
 			try {
 				spaceinvaders.positionnerUnNouveauVaisseau(15,9);

@@ -55,12 +55,14 @@ public class SpaceInvaders {
 			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
 	
 		vaisseau = new Vaisseau(x, y); 
-
-	}
+	}	
 
 	private boolean estDansEspaceJeu(int x, int y) {
 		return ((x >= 0) && (x < longueur)) && ((y >= 0) && (y < hauteur));
 	}
 	
+	public void deplacerVaisseauVersLaDroite() {
+        if (vaisseau.getX()< (longueur-1)) vaisseau.seDeplacerVersLaDroite();
+	}
 }
 
