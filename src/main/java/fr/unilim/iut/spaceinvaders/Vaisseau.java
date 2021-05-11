@@ -22,4 +22,7 @@ public class Vaisseau {
 		public int getX() {
 	        return this.x;
 		}
+		 public void seDeplacerVersLaGauche() {
+		      this.x = this.x -1 ;
+	  }
 }
