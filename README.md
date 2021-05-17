@@ -1,6 +1,6 @@
 # Space Invaders
 ## Semaine n°1 : du 26 avril au 02 mai <a id="semaine1"></a>
-## Semaine n°1 : du 9 mail au 16 mai <a id="semaine2"></a>
+## Semaine n°2 : du 9 mail au 16 mai <a id="semaine2"></a>
 
 
 ### Sprints et fonctionnalités réalisées 
@@ -29,23 +29,24 @@ Le vaisseau se déplace d'un pas vers la gauche Si le vaisseau se trouve sur la 
 
 ### Fonctionnalité 2 en cours d’implémentation : Dimensionner le vaiseau
 
-- Story n°1 : Positionner un nouveau vaisseau avec une dimension donnée
+- Story n°1 : Positionner un nouveau vaisseau avec une dimension donnée (wip)
 
 
-### Diagramme de classes 
+### Diagramme de classes (semaine n°1)  
 
 ![Diagrammes de classes de la semaine 1](images/diagramme_semaine1.png)
 
-### Nuage de mots du projet spaceinvaders (séance n°1)  
+### Nuage de mots du projet spaceinvaders (semaine n°1)  
 
 
 ![Nuage de mots de la semaine 1](images/nuage_semaine1.png)
 
 
+### Diagramme de classes (semaine n°2)  
 
 ![Diagrammes de classes de la semaine 2](images/diagramme_semaine2.png)
 
-### Nuage de mots du projet spaceinvaders (séance n°2)  
+### Nuage de mots du projet spaceinvaders (semaine n°2)  
 
 
 ![Nuage de mots de la semaine 2](images/nuage_semaine2.png)
