@@ -1,5 +1,6 @@
 # Space Invaders
 ## Semaine n°1 : du 26 avril au 02 mai <a id="semaine1"></a>
+## Semaine n°1 : du 9 mail au 16 mai <a id="semaine2"></a>
 
 
 ### Sprints et fonctionnalités réalisées 
