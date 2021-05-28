@@ -76,7 +76,22 @@ Le vaisseau se déplace d'un pas vers la gauche Si le vaisseau se trouve sur la 
 
 
 
+## Semaine n°4 : du 24 mai au 30 mai <a id="semaine4"></a>
 
+### Sprints et fonctionnalités réalisées 
+
+### Fonctionnalité 2 : Dimensionner le vaiseau (fini)
+
+- Story 3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
+- Story 4 : Déplacer un vaisseau vers la gauche en tenant compte de sa dimension
+
+### Diagramme de classes (semaine n°4)  
+
+![Diagrammes de classes de la semaine 4](images/diagramme_semaine4.png)
+
+### Nuage de mots du projet spaceinvaders (semaine n°3)  
+
+![Nuage de mots de la semaine 4](images/nuage_semaine4.png)
 
 
 ### Difficultés rencontrées 
