@@ -4,26 +4,30 @@ package fr.unilim.iut.spaceinvaders;
 
 		int longueur;
 		int hauteur;
-		int x;
-		int y;
+		Position origine;
+		Dimension dimension;
 		
-	    public Vaisseau(int longueur, int hauteur, int x, int y) {
-		   this.longueur=longueur;
-		   this.hauteur=hauteur;
-		   this.x = x;
-		   this.y = y;
-	    }
+		
+		
+		   public Vaisseau(int longueur, int hauteur, int x, int y) 
+		   {
+			   this.dimension = new Dimension(longueur, hauteur);
+			   this.origine = new Position (x,y);
+		   }
 
-		public Vaisseau(int longueur, int hauteur) {
-			this(longueur, hauteur, 0, 0);
-		}
 		
+		  public Vaisseau(int longueur, int hauteur) {
+	            this(longueur, hauteur, 0, 0);
+	        }
+
+
+
 		public boolean occupeLaPosition(int x, int y) {
 			return (estAbscisseCouverte(x) && estOrdonneeCouverte(y));
 		}
 
 		private boolean estOrdonneeCouverte(int y) {
-			return (this.y-this.hauteur+1<=y) && (y<=this.y);
+			return (this.origine.ordonnee()-this.dimension.hauteur()+1<=y) && (y<=this.origine.ordonnee());
 		}
 
 		private boolean estAbscisseCouverte(int x) {
@@ -31,24 +35,27 @@ package fr.unilim.iut.spaceinvaders;
 		}
 
 		public int abscisseLaPlusADroite() {
-			return this.x+this.longueur-1;
+			return this.origine.abscisse()+this.dimension.longueur()-1;
+		}
+		
+		public int abscisseLaPlusAGauche() {
+	        return this.origine.abscisse();
 		}
 	    
-	    public void seDeplacerVersLaDroite() {
-		      this.x = this.x + 1 ;
-	   }
-	    public void seDeplacerVersLaGauche() {
-		      this.x = this.x - 1 ;
-	   }
-	    
-	   	public int abscisseLaPlusAGauche() {
-	        return this.x;
-		}
+		   public void seDeplacerVersLaDroite() {
+			    this.origine.changerAbscisse(this.origine.abscisse()+1);
+		   }
 
-	    public void positionner(int x, int y) {
-		    this.x = x;
-		    this.y = y;
-	    }
+		
+	       public void seDeplacerVersLaGauche() {
+			    this.origine.changerAbscisse(this.origine.abscisse()-1);
+		  }
+		
+		
+	      public void positionner(int x, int y) {
+			  this.origine.changerAbscisse(x);
+			  this.origine.changerOrdonnee(y);
+	      }
 
 	}
 
